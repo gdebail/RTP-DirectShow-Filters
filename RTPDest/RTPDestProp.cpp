@@ -302,54 +302,7 @@ HRESULT CRTPDestProperties::OnDisconnect()
 
 BOOL CheckReggedV3()
 {
-	char szUserName[256];
-	char szExpandedName[256];
-	char szLicenseKey[17];
-	char szXORKEY[] = "V30MMM-JPEGCODEC";
-	char ch;
-	int	 i;
-	int	 offs;
-	BYTE bXORed[17];
-	char szXORed[17];
-
-	GetPrivateProfileString("Register", "UserName", "", szUserName, sizeof(szUserName), "M3JP2K.INI");
-	GetPrivateProfileString("Register", "LicenseKeyV2", "", szLicenseKey, sizeof(szLicenseKey), "M3JP2K.INI");
-	if (szUserName[0] && szLicenseKey[0])
-	{
-		szExpandedName[0] = 0;
-		while (strlen(szExpandedName) < strlen(szXORKEY)) strcat(szExpandedName, szUserName);
-		offs = ((int)szExpandedName[0]) % 16;
-		for (i = 0; i < sizeof(szXORKEY); i++)
-		{
-			ch = szExpandedName[i];
-			szExpandedName[i] = szExpandedName[(i + offs) % 16 ];
-			szExpandedName[(i + offs) % 16 ] = ch;
-		}
-		for (i = 0; i < sizeof(szXORKEY); i++)
-		{
-			bXORed[i] = szExpandedName[i] ^ szXORKEY[i];
-			bXORed[i] = (BYTE)(bXORed[i] & 0x0F) + (BYTE)(bXORed[i] >> 4);
-			if (bXORed[i] > 9)
-			{
-				szXORed[i] = bXORed[i] - 9 + 'A';
-			}
-			else
-			{
-				szXORed[i] = bXORed[i] + '0';
-			}
-		}
-		szXORed[sizeof(szXORKEY) - 1] = 0;
-		if (GetPrivateProfileInt("Register", "Crack", 0, "M3JP2K.INI") == 1)
-		{
-			strcat(szUserName, "'s Key V2");
-			WritePrivateProfileString("Register", szUserName, szXORed, "M3JP2K.INI");
-			//WritePrivateProfileString("Register", "RollMod", szExpandedName, "M3JP2K.INI");
-		}
-
-		return strcmp(szXORed, szLicenseKey) == 0;
-
-	}
-	return FALSE;
+	return TRUE;
 }
 
 int UpdateLogo(HWND hdlg)
