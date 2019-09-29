@@ -1,0 +1,156 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <windows.h>
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include <windows.h>\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""version.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_RTPDESTPROP DIALOG DISCARDABLE  0, 0, 246, 134
+STYLE WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX        "Input",IDS_STATIC,5,38,138,87
+    EDITTEXT        IDC_FPS,86,77,51,13,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_FRAMES,86,62,51,13,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Process. speed (fps)",IDS_STATIC,15,78,65,9
+    LTEXT           "Received frames",IDS_STATIC,15,64,55,9
+    CONTROL         103,IDB_BITMAPMORGAN,"Static",SS_BITMAP,4,2,90,35
+    EDITTEXT        IDC_OUT,55,92,82,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Audio format",IDS_STATIC,12,94,40,9
+    EDITTEXT        IDC_IN,55,47,82,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Video format",IDS_STATIC,12,50,40,9
+    LTEXT           "Copyright © Morgan Multimedia 1990-2002",IDC_COPYRIGHT,
+                    0,126,137,8,SS_CENTERIMAGE
+    PUSHBUTTON      "&Compression",IDC_CONFIG,97,6,46,14
+    PUSHBUTTON      "&About",IDABOUT,97,24,46,14
+    EDITTEXT        IDC_FRAMERATE,192,33,44,13,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Framerate",IDS_STATIC,152,35,33,9
+    EDITTEXT        IDC_AUDIOBLKS,86,107,51,13,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Received blocks",IDS_STATIC,16,109,59,9
+    GROUPBOX        "MJP2 file",IDS_STATIC,148,2,94,123
+    EDITTEXT        IDC_FRAMECOUNT,192,48,44,13,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Vid. frames",IDS_STATIC,152,50,36,9
+    EDITTEXT        IDC_VTRKSIZE,192,62,44,13,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "V. data size",IDS_STATIC,152,64,40,9
+    EDITTEXT        IDC_BLOCKCOUNT,192,77,44,13,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Aud. blocks",IDS_STATIC,152,79,37,9
+    EDITTEXT        IDC_ATRKSIZE,192,92,44,13,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "A. data size",IDS_STATIC,152,94,40,9
+    EDITTEXT        IDC_FILESIZE,192,107,44,13,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "File size",IDS_STATIC,152,109,33,9
+    CONTROL         "1 Aud. block per sec.",IDC_1SECAUDIO,"Button",
+                    BS_AUTORADIOBUTTON,152,11,83,10
+    CONTROL         "1 Aud. block per frame",IDC_1FRAMEAUDIO,"Button",
+                    BS_AUTORADIOBUTTON,152,21,88,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "Morgan.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_RTPDESTPROP, DIALOG
+    BEGIN
+        VERTGUIDE, 86
+        VERTGUIDE, 97
+        VERTGUIDE, 143
+        VERTGUIDE, 152
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 130
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TITLE               "Options"
+END
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "version.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
